@@ -1,0 +1,6 @@
+
+target 'TravelApp' do
+
+  pod 'Kingfisher', '~> 7.3'
+
+end
