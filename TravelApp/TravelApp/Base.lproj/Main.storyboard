@@ -26,10 +26,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unsplash_rsD_jv_A8Yo" translatesAutoresizingMaskIntoConstraints="NO" id="S58-FO-W7D">
-                                <rect key="frame" x="0.0" y="44" width="414" height="466"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="466"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WHC-GH-wi6">
-                                <rect key="frame" x="20" y="390" width="64" height="96"/>
+                                <rect key="frame" x="20" y="434" width="64" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="96" id="IKC-02-eD5"/>
                                     <constraint firstAttribute="width" constant="64" id="JIu-Le-V7l"/>
@@ -38,21 +38,24 @@
                                 <state key="normal" image="Flights İcon">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
                                 </state>
+                                <connections>
+                                    <segue destination="d8u-Pc-mYf" kind="show" id="Jbz-gy-NcH"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where’s your                                        Next Destination?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jru-hF-FK9">
-                                <rect key="frame" x="20" y="285.5" width="344" height="80.5"/>
+                                <rect key="frame" x="20" y="329.5" width="344" height="80.5"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TOP-PICK ARTICLES" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rad-Js-JPJ">
-                                <rect key="frame" x="17" y="535" width="164.5" height="25.5"/>
+                                <rect key="frame" x="17" y="579" width="164.5" height="25.5"/>
                                 <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="gig-dk-DZ9">
-                                <rect key="frame" x="0.0" y="568.5" width="414" height="219.5"/>
+                                <rect key="frame" x="0.0" y="612.5" width="414" height="175.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="1Mn-Ie-zRy">
                                     <size key="itemSize" width="128" height="128"/>
@@ -62,7 +65,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Zm9-i9-ADn">
-                                        <rect key="frame" x="0.0" y="46" width="128" height="128"/>
+                                        <rect key="frame" x="0.0" y="24" width="128" height="128"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="XJF-hD-uKS">
                                             <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
@@ -72,7 +75,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aH5-Gl-CGi">
-                                <rect key="frame" x="115" y="390" width="64" height="96"/>
+                                <rect key="frame" x="115" y="434" width="64" height="96"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="64" id="VuC-rm-6aO"/>
                                     <constraint firstAttribute="height" constant="96" id="hAZ-Do-P2T"/>
@@ -81,6 +84,9 @@
                                 <state key="normal" image="Hotels İcon">
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
                                 </state>
+                                <connections>
+                                    <segue destination="TW5-cs-lDj" kind="show" id="cNe-ua-tTj"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -106,14 +112,88 @@
                             <constraint firstItem="rad-Js-JPJ" firstAttribute="top" secondItem="S58-FO-W7D" secondAttribute="bottom" constant="25" id="yKI-pN-kp5"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="home button not selected" selectedImage="home button selected" id="cl7-7s-6fe"/>
+                    <navigationItem key="navigationItem" id="5tt-C5-1qN"/>
                     <connections>
                         <outlet property="topPickArticlesCollectionView" destination="gig-dk-DZ9" id="2Nk-fn-oZk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="771.01449275362324" y="-559.15178571428567"/>
+            <point key="canvasLocation" x="1681.1594202898552" y="-559.15178571428567"/>
+        </scene>
+        <!--Flight View Controller-->
+        <scene sceneID="ZAa-PH-Ohs">
+            <objects>
+                <viewController id="d8u-Pc-mYf" customClass="FlightViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="q0v-xn-0Yb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-q2-iOx">
+                                <rect key="frame" x="16" y="104" width="382" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="P0t-f5-Lpo"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oIQ-q2-iOx" firstAttribute="top" secondItem="P0t-f5-Lpo" secondAttribute="top" constant="16" id="5kY-lc-I2C"/>
+                            <constraint firstItem="P0t-f5-Lpo" firstAttribute="trailing" secondItem="oIQ-q2-iOx" secondAttribute="trailing" constant="16" id="6JM-sp-D0b"/>
+                            <constraint firstItem="oIQ-q2-iOx" firstAttribute="leading" secondItem="P0t-f5-Lpo" secondAttribute="leading" constant="16" id="7DT-3U-1m3"/>
+                            <constraint firstItem="P0t-f5-Lpo" firstAttribute="bottom" secondItem="oIQ-q2-iOx" secondAttribute="bottom" constant="16" id="EyE-Cm-Lh8"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="eya-hI-eGO">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="uVP-Lp-HXM">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="vuS-h5-nxe">
+                                <rect key="frame" x="20" y="0.0" width="56" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back arrow"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kDE-yM-e5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337.68115942029" y="-559.15178571428567"/>
+        </scene>
+        <!--Hotels View Controller-->
+        <scene sceneID="CLc-g8-ddZ">
+            <objects>
+                <viewController id="TW5-cs-lDj" customClass="HotelsViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tn3-pk-5ad">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="khT-dr-YbX">
+                                <rect key="frame" x="16" y="104" width="382" height="693"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="rnc-Q7-7LO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rnc-Q7-7LO" firstAttribute="trailing" secondItem="khT-dr-YbX" secondAttribute="trailing" constant="16" id="2ps-5I-xjt"/>
+                            <constraint firstItem="rnc-Q7-7LO" firstAttribute="bottom" secondItem="khT-dr-YbX" secondAttribute="bottom" constant="16" id="4as-zv-TnN"/>
+                            <constraint firstItem="khT-dr-YbX" firstAttribute="top" secondItem="rnc-Q7-7LO" secondAttribute="top" constant="16" id="MdP-7v-Fv0"/>
+                            <constraint firstItem="khT-dr-YbX" firstAttribute="leading" secondItem="rnc-Q7-7LO" secondAttribute="leading" constant="16" id="UV6-zg-41i"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="e5C-dY-fah">
+                        <barButtonItem key="leftBarButtonItem" style="plain" id="ifW-8D-8AC">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QbP-Rb-S1c">
+                                <rect key="frame" x="20" y="0.0" width="56" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="back arrow" imagePlacement="top"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vy3-Ly-yCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3041" y="-559"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="jen-R9-j1A">
@@ -126,7 +206,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="BXx-wh-OMw"/>
+                        <segue destination="RAa-Zh-eA9" kind="relationship" relationship="viewControllers" id="BXx-wh-OMw"/>
                         <segue destination="mcP-Cu-m2V" kind="relationship" relationship="viewControllers" id="Uhy-hN-cYw"/>
                         <segue destination="dnX-jr-D4L" kind="relationship" relationship="viewControllers" id="Zxe-0a-kH1"/>
                     </connections>
@@ -166,7 +246,7 @@
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gJK-6L-Max">
                                 <rect key="frame" x="16" y="216" width="382" height="34"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="LN1-h1-ZLr">
@@ -214,12 +294,21 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zaQ-Ow-g2A">
+                                <rect key="frame" x="16" y="168" width="382" height="629"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Y5F-VZ-Cde"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Y5F-VZ-Cde" firstAttribute="bottom" secondItem="zaQ-Ow-g2A" secondAttribute="bottom" constant="16" id="3WW-qv-KAW"/>
                             <constraint firstItem="ffn-b1-ueL" firstAttribute="top" secondItem="Y5F-VZ-Cde" secondAttribute="top" constant="58" id="Bpm-Hc-w29"/>
+                            <constraint firstItem="Y5F-VZ-Cde" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="ffn-b1-ueL" secondAttribute="trailing" symbolic="YES" id="RfE-pZ-3LT"/>
+                            <constraint firstItem="zaQ-Ow-g2A" firstAttribute="leading" secondItem="Y5F-VZ-Cde" secondAttribute="leading" constant="16" id="WWG-Hj-4A4"/>
+                            <constraint firstItem="zaQ-Ow-g2A" firstAttribute="top" secondItem="ffn-b1-ueL" secondAttribute="bottom" constant="28" id="kWJ-rX-faZ"/>
                             <constraint firstItem="ffn-b1-ueL" firstAttribute="leading" secondItem="Y5F-VZ-Cde" secondAttribute="leading" constant="16" id="rgT-K3-hq8"/>
+                            <constraint firstItem="Y5F-VZ-Cde" firstAttribute="trailing" secondItem="zaQ-Ow-g2A" secondAttribute="trailing" constant="16" id="tsQ-qe-EId"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="color" keyPath="tintColor">
@@ -233,6 +322,37 @@
             </objects>
             <point key="canvasLocation" x="782" y="749"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xp5-yw-pdy">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" interfaceStyle="light" id="RAa-Zh-eA9" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="home button not selected" selectedImage="home button selected" id="cl7-7s-6fe"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" opaque="NO" contentMode="center" id="9wQ-NK-wXk">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="30"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="30"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5SZ-a5-ESB">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="5U9-LD-meh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7W-Ss-7Ss" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="771.01449275362324" y="-559.15178571428567"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Booking button not selected" width="68" height="48"/>
@@ -240,6 +360,7 @@
         <image name="Flights Not Selected" width="109" height="39"/>
         <image name="Hotel selected" width="96" height="40"/>
         <image name="Hotels İcon" width="64" height="96"/>
+        <image name="back arrow" width="32" height="32"/>
         <image name="booking button selected" width="68" height="48"/>
         <image name="home button not selected" width="68" height="48"/>
         <image name="home button selected" width="68" height="48"/>

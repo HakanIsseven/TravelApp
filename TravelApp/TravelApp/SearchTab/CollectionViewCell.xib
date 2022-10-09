@@ -1,21 +1,85 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13142" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12042"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="CollectionViewCell" customModule="TravelApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="358" height="153"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
-                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                <rect key="frame" x="0.0" y="0.0" width="358" height="153"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Gm-Ec-T7f">
+                        <rect key="frame" x="0.0" y="0.0" width="358" height="153"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unsplash_vk4vjTNVrTg" translatesAutoresizingMaskIntoConstraints="NO" id="Bcd-V5-q2R">
+                                <rect key="frame" x="0.0" y="0.0" width="358" height="153"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marina Bay" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPT-Sm-ekd">
+                                <rect key="frame" x="8" y="46" width="337" height="32"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Singapore" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moG-Cz-v6Z">
+                                <rect key="frame" x="8" y="88" width="337" height="23"/>
+                                <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemCyanColor"/>
+                        <constraints>
+                            <constraint firstItem="Bcd-V5-q2R" firstAttribute="leading" secondItem="0Gm-Ec-T7f" secondAttribute="leading" id="5nk-Qe-Jlm"/>
+                            <constraint firstAttribute="bottom" secondItem="Bcd-V5-q2R" secondAttribute="bottom" id="ATx-UC-Xcm"/>
+                            <constraint firstItem="moG-Cz-v6Z" firstAttribute="leading" secondItem="0Gm-Ec-T7f" secondAttribute="leading" constant="8" id="Eun-fx-20N"/>
+                            <constraint firstItem="oPT-Sm-ekd" firstAttribute="top" secondItem="0Gm-Ec-T7f" secondAttribute="top" constant="46" id="F8H-Mv-5n1"/>
+                            <constraint firstItem="moG-Cz-v6Z" firstAttribute="top" secondItem="oPT-Sm-ekd" secondAttribute="bottom" constant="10" id="Hm0-rl-ebl"/>
+                            <constraint firstItem="Bcd-V5-q2R" firstAttribute="top" secondItem="0Gm-Ec-T7f" secondAttribute="top" id="Ihs-vU-9kZ"/>
+                            <constraint firstAttribute="trailing" secondItem="oPT-Sm-ekd" secondAttribute="trailing" constant="13" id="QJM-4Z-gx5"/>
+                            <constraint firstAttribute="trailing" secondItem="Bcd-V5-q2R" secondAttribute="trailing" id="Qoa-4T-9Az"/>
+                            <constraint firstItem="oPT-Sm-ekd" firstAttribute="leading" secondItem="0Gm-Ec-T7f" secondAttribute="leading" constant="8" id="WAi-1S-Iv2"/>
+                            <constraint firstAttribute="trailing" secondItem="moG-Cz-v6Z" secondAttribute="trailing" constant="13" id="bIH-5t-hVP"/>
+                        </constraints>
+                    </view>
+                </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="0Gm-Ec-T7f" secondAttribute="bottom" id="Ckz-0K-yt5"/>
+                <constraint firstItem="0Gm-Ec-T7f" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="hA1-vg-OZW"/>
+                <constraint firstAttribute="trailing" secondItem="0Gm-Ec-T7f" secondAttribute="trailing" id="nJM-1l-KP5"/>
+                <constraint firstItem="0Gm-Ec-T7f" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="nai-lD-fLY"/>
+            </constraints>
+            <size key="customSize" width="355" height="272"/>
+            <connections>
+                <outlet property="bottomLabel" destination="moG-Cz-v6Z" id="ldo-eq-Gzk"/>
+                <outlet property="collectionViewImage" destination="Bcd-V5-q2R" id="3mQ-Lb-dQK"/>
+                <outlet property="topLabel" destination="Bcd-V5-q2R" id="VZV-kD-fp7"/>
+            </connections>
+            <point key="canvasLocation" x="356.52173913043481" y="98.102678571428569"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="unsplash_vk4vjTNVrTg" width="253" height="120"/>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
