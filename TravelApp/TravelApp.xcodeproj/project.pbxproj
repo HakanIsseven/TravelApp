@@ -17,6 +17,9 @@
 		CB6C7DCA28E6FC7600BE3F05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7DC828E6FC7600BE3F05 /* Main.storyboard */; };
 		CB6C7DCC28E6FC7800BE3F05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7DCB28E6FC7800BE3F05 /* Assets.xcassets */; };
 		CB6C7DCF28E6FC7800BE3F05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB6C7DCD28E6FC7800BE3F05 /* LaunchScreen.storyboard */; };
+		CBB480DF28F243EB0098B92D /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB480DE28F243EB0098B92D /* SearchViewController.swift */; };
+		CBB480E428F248080098B92D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBB480E228F248080098B92D /* CollectionViewCell.swift */; };
+		CBB480E528F248080098B92D /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CBB480E328F248080098B92D /* CollectionViewCell.xib */; };
 		E0D9779A01838C3ADE14CE5A /* libPods-TravelApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B59EB5CAA073AB44E64C9463 /* libPods-TravelApp.a */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +39,9 @@
 		CB6C7DCB28E6FC7800BE3F05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CB6C7DCE28E6FC7800BE3F05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB6C7DD028E6FC7800BE3F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBB480DE28F243EB0098B92D /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		CBB480E228F248080098B92D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		CBB480E328F248080098B92D /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,16 +106,35 @@
 			children = (
 				CB6C7DC228E6FC7600BE3F05 /* AppDelegate.swift */,
 				CB6C7DC428E6FC7600BE3F05 /* SceneDelegate.swift */,
-				CB6C7DC628E6FC7600BE3F05 /* HomeViewController.swift */,
+				CBB480E028F247CB0098B92D /* HomeTab */,
+				CBB480E128F247E70098B92D /* SearchTab */,
 				CB6C7DC828E6FC7600BE3F05 /* Main.storyboard */,
 				CB6C7DCB28E6FC7800BE3F05 /* Assets.xcassets */,
 				CB6C7DCD28E6FC7800BE3F05 /* LaunchScreen.storyboard */,
 				CB6C7DD028E6FC7800BE3F05 /* Info.plist */,
-				CB26423D28EB7ACB00B65B70 /* TopArticlesCollectionViewCell.swift */,
-				CB26423E28EB7ACB00B65B70 /* TopArticlesCollectionViewCell.xib */,
 				CB26423828EB711000B65B70 /* Fonts */,
 			);
 			path = TravelApp;
+			sourceTree = "<group>";
+		};
+		CBB480E028F247CB0098B92D /* HomeTab */ = {
+			isa = PBXGroup;
+			children = (
+				CB6C7DC628E6FC7600BE3F05 /* HomeViewController.swift */,
+				CB26423D28EB7ACB00B65B70 /* TopArticlesCollectionViewCell.swift */,
+				CB26423E28EB7ACB00B65B70 /* TopArticlesCollectionViewCell.xib */,
+			);
+			path = HomeTab;
+			sourceTree = "<group>";
+		};
+		CBB480E128F247E70098B92D /* SearchTab */ = {
+			isa = PBXGroup;
+			children = (
+				CBB480DE28F243EB0098B92D /* SearchViewController.swift */,
+				CBB480E228F248080098B92D /* CollectionViewCell.swift */,
+				CBB480E328F248080098B92D /* CollectionViewCell.xib */,
+			);
+			path = SearchTab;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +197,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CB6C7DCF28E6FC7800BE3F05 /* LaunchScreen.storyboard in Resources */,
+				CBB480E528F248080098B92D /* CollectionViewCell.xib in Resources */,
 				CB26424028EB7ACB00B65B70 /* TopArticlesCollectionViewCell.xib in Resources */,
 				CB6C7DCC28E6FC7800BE3F05 /* Assets.xcassets in Resources */,
 				CB26423C28EB725200B65B70 /* SourceSansPro-Bold.otf in Resources */,
@@ -212,7 +238,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBB480DF28F243EB0098B92D /* SearchViewController.swift in Sources */,
 				CB6C7DC728E6FC7600BE3F05 /* HomeViewController.swift in Sources */,
+				CBB480E428F248080098B92D /* CollectionViewCell.swift in Sources */,
 				CB6C7DC328E6FC7600BE3F05 /* AppDelegate.swift in Sources */,
 				CB6C7DC528E6FC7600BE3F05 /* SceneDelegate.swift in Sources */,
 				CB26423F28EB7ACB00B65B70 /* TopArticlesCollectionViewCell.swift in Sources */,
