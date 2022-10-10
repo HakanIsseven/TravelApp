@@ -84,6 +84,15 @@ private extension FlightListViewController {
 
 extension FlightListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       
+        let detailsVc = FlightDetailsViewController()
+        
+        detailsVc.flightData = self.flights[indexPath.row]
+        detailsVc.modalPresentationStyle = .fullScreen
+        self.present(detailsVc, animated: true)
+        
+    }
 
 }
 
@@ -93,8 +102,10 @@ extension FlightListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = flightTableView2.dequeueReusableCell(withIdentifier: "TableViewCell") as! TableViewCell
-        cell.tableViewMainLabel.text = flights[indexPath.row].arrival
-        cell.tableViewSecondLabel.text = flights[indexPath.row].departure
+        cell.tableViewMainLabel.text = flights[indexPath.row].callSign
+        cell.tableViewSecondLabel.text = flights[indexPath.row].flightNumber
+        cell.layer.cornerRadius = 8
+        cell.clipsToBounds = true
 
 
         return cell

@@ -98,6 +98,21 @@ extension HomeViewController: UICollectionViewDataSource  {
 
 extension HomeViewController: UICollectionViewDelegate {
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        
+        let detailsVc = ArticleDetailsViewController()
+        detailsVc.articleData = self.articles[indexPath.row]
+        
+
+        detailsVc.modalPresentationStyle = .fullScreen
+        self.present(detailsVc, animated: true)
+        
+        
+        
+    }
+    
 }
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout  {

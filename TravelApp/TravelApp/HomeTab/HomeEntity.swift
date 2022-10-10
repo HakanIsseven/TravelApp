@@ -19,7 +19,8 @@ struct HomeCellViewModel {
 
 
 struct Article: Codable {
-    let articleName, articleTag: String?
+    let articleName: String
+    let articleTag: String
     let id: Int
     let articlePhoto: String
     let articleDesc: String

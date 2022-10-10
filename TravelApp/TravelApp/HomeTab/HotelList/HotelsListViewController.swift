@@ -38,6 +38,13 @@ class HotelsListViewController: UIViewController {
 
 extension HotelsListViewController: UITableViewDelegate {
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailsVc = HotelDetailsViewController()
+        
+        detailsVc.hotelsData = self.hotels[indexPath.row]
+        detailsVc.modalPresentationStyle = .fullScreen
+        self.present(detailsVc, animated: true)
+    }
 
 }
 
@@ -52,7 +59,7 @@ extension HotelsListViewController: UITableViewDataSource {
         cell.tableViewSecondLabel.text = hotels[indexPath.row].city
         let url = URL.init(string: hotels[indexPath.row].photo!)
         cell.tableViewBackImage.kf.setImage(with: url)
-        cell.layer.cornerRadius = 12
+        cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
 
 

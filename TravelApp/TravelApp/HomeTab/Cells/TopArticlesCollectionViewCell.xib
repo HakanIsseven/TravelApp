@@ -22,9 +22,9 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xEQ-NA-joV">
-                        <rect key="frame" x="0.0" y="278" width="465" height="154"/>
+                        <rect key="frame" x="8" y="278" width="449" height="57.5"/>
                         <string key="text">Bir Şeyler Bir Şeyler Bir ŞEylerBir Şeyler Bir Şeyler Bir ŞEylerBir Şeyler Bir Şeyler Bir ŞEylerBir Şeyler Bir Şeyler Bir ŞEyler</string>
-                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -42,16 +42,14 @@
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <constraints>
                 <constraint firstItem="4Hy-27-1A2" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="12" id="5hh-9G-oWP"/>
-                <constraint firstItem="xEQ-NA-joV" firstAttribute="top" secondItem="IZm-Nm-NWw" secondAttribute="bottom" constant="30" id="8Gu-s6-Ybe"/>
-                <constraint firstAttribute="trailing" secondItem="xEQ-NA-joV" secondAttribute="trailing" id="GnF-RZ-M6h"/>
                 <constraint firstItem="4Hy-27-1A2" firstAttribute="top" secondItem="IZm-Nm-NWw" secondAttribute="bottom" constant="8" id="Ikj-MZ-kqB"/>
-                <constraint firstAttribute="trailing" secondItem="xEQ-NA-joV" secondAttribute="trailing" id="NVf-nX-nnz"/>
-                <constraint firstItem="xEQ-NA-joV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="a35-8H-6cp"/>
+                <constraint firstAttribute="trailing" secondItem="xEQ-NA-joV" secondAttribute="trailing" constant="8" id="bC2-Ux-Tdi"/>
                 <constraint firstItem="IZm-Nm-NWw" firstAttribute="height" secondItem="gTV-IL-0wX" secondAttribute="height" multiplier="0.560611" id="gXE-SV-5QO"/>
                 <constraint firstAttribute="trailing" secondItem="4Hy-27-1A2" secondAttribute="trailing" constant="12" id="jQ1-3S-XLB"/>
                 <constraint firstItem="IZm-Nm-NWw" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="n5I-6k-Bmf"/>
+                <constraint firstItem="xEQ-NA-joV" firstAttribute="top" secondItem="4Hy-27-1A2" secondAttribute="bottom" constant="4" id="r0K-zY-O10"/>
                 <constraint firstItem="IZm-Nm-NWw" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="rK5-eQ-0Pl"/>
-                <constraint firstAttribute="bottom" secondItem="xEQ-NA-joV" secondAttribute="bottom" constant="10" id="xki-p0-XgU"/>
+                <constraint firstItem="xEQ-NA-joV" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" constant="8" id="xPA-TJ-yeL"/>
                 <constraint firstAttribute="trailing" secondItem="IZm-Nm-NWw" secondAttribute="trailing" id="zvr-MY-zj4"/>
             </constraints>
             <size key="customSize" width="465" height="442"/>

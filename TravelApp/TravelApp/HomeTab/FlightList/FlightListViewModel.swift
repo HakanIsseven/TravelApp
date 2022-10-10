@@ -31,7 +31,7 @@ private extension FlightListViewModel  {
     @discardableResult
     func makeViewBasedModel(_ flights: [Flight])-> [FlightCellViewModel] {
        
-        return flights.map { .init(departure: $0.flight.number, arrival: $0.airline.callsign.rawValue)
+        return flights.map { .init(flightNumber: $0.flight.number, callSign: $0.airline.callsign.rawValue, arrivalAirport: $0.arrival.airport.rawValue, departureAirpot: $0.departure.airport.rawValue)
         }
     }
 }

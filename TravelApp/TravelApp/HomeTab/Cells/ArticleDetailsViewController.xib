@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ArticleDetailsViewController" customModule="TravelApp" customModuleProvider="target">
+            <connections>
+                <outlet property="articleDetailsDesc" destination="tge-RJ-VAS" id="Q63-4c-gGJ"/>
+                <outlet property="articleDetailsImage" destination="Yvg-Bn-hSj" id="ua6-l9-lGQ"/>
+                <outlet property="articleDetailsTag" destination="jVv-hj-GWW" id="XAJ-uv-NTT"/>
+                <outlet property="articleDetailsTitle" destination="auK-ie-5wD" id="G86-mC-Hyf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GettyImages-185298837" translatesAutoresizingMaskIntoConstraints="NO" id="Yvg-Bn-hSj">
+                    <rect key="frame" x="0.0" y="44" width="414" height="430"/>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="EXPERİENCE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVv-hj-GWW">
+                    <rect key="frame" x="21" y="490" width="377" height="18"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="14"/>
+                    <color key="textColor" red="0.0" green="0.28235294119999998" blue="0.94117647059999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The best seafood restaurants in Plymouth, Devo" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="auK-ie-5wD">
+                    <rect key="frame" x="21" y="517" width="359" height="63"/>
+                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="25"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tge-RJ-VAS">
+                    <rect key="frame" x="21" y="586" width="359" height="115"/>
+                    <string key="text">The last time I was in Plymouth was over thirty years ago, and I quietly dismissed it as a navy town with botched post-war architecture. Now the sailors have left, new developments are springing up everywhere, and there’s a confidence around the place that was missing.</string>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GPS-ds-1R6">
+                    <rect key="frame" x="33" y="711" width="343" height="110"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Bookmark Button"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ME0-Cl-fkY">
+                    <rect key="frame" x="15" y="56" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="HkO-TP-u28"/>
+                        <constraint firstAttribute="height" constant="45" id="tt6-Xh-BDJ"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" image="Group 1"/>
+                    <connections>
+                        <action selector="backButtonTapped:" destination="-1" eventType="touchUpInside" id="BWK-p4-g7g"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jVv-hj-GWW" secondAttribute="trailing" constant="16" id="9cL-Zy-ifd"/>
+                <constraint firstItem="Yvg-Bn-hSj" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="AdU-6d-fxG"/>
+                <constraint firstItem="auK-ie-5wD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="Alk-q9-1bR"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tge-RJ-VAS" secondAttribute="trailing" constant="34" id="Fjg-Q9-UcG"/>
+                <constraint firstItem="jVv-hj-GWW" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="GX9-2V-37U"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="GPS-ds-1R6" secondAttribute="trailing" constant="38" id="JJ9-z6-PaW"/>
+                <constraint firstItem="tge-RJ-VAS" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="21" id="Lx8-mg-2be"/>
+                <constraint firstItem="Yvg-Bn-hSj" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Pe6-s6-AJ2"/>
+                <constraint firstItem="jVv-hj-GWW" firstAttribute="top" secondItem="Yvg-Bn-hSj" secondAttribute="bottom" constant="16" id="Qrr-fN-oDe"/>
+                <constraint firstItem="GPS-ds-1R6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="33" id="T0F-ii-UmA"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="auK-ie-5wD" secondAttribute="trailing" constant="34" id="T3n-v8-Eul"/>
+                <constraint firstItem="ME0-Cl-fkY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="Tdt-he-ht1"/>
+                <constraint firstItem="Yvg-Bn-hSj" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cp2-2K-9nC"/>
+                <constraint firstItem="auK-ie-5wD" firstAttribute="top" secondItem="jVv-hj-GWW" secondAttribute="bottom" constant="9" id="e40-eh-h7Y"/>
+                <constraint firstItem="GPS-ds-1R6" firstAttribute="top" secondItem="tge-RJ-VAS" secondAttribute="bottom" constant="10" id="eR4-bh-TAb"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="GPS-ds-1R6" secondAttribute="bottom" constant="41" id="hFv-EB-Xqq"/>
+                <constraint firstItem="Yvg-Bn-hSj" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="0.48" id="iQA-df-IyB"/>
+                <constraint firstItem="tge-RJ-VAS" firstAttribute="top" secondItem="auK-ie-5wD" secondAttribute="bottom" constant="6" id="mGb-0x-e8v"/>
+                <constraint firstItem="ME0-Cl-fkY" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="12" id="uSE-RK-Lbs"/>
+            </constraints>
+            <point key="canvasLocation" x="137.68115942028987" y="75.669642857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Bookmark Button" width="309" height="54"/>
+        <image name="GettyImages-185298837" width="2560" height="1440"/>
+        <image name="Group 1" width="45" height="45"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

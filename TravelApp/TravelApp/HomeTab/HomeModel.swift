@@ -17,7 +17,7 @@ class HomeModel {
 
     func fetchData() {
 
-        guard let url = URL.init(string: "https://mocki.io/v1/364ef6df-f6f8-4ec8-b817-596c942a9c00") else {
+        guard let url = URL.init(string: "https://mocki.io/v1/384d95c3-00d2-430a-b653-76a2513e2141") else {
             delegate?.didDataFetchProcessFinished(false)
             return
         }
@@ -43,7 +43,7 @@ class HomeModel {
 
             do {
                 let jsonDecoder = JSONDecoder()
-                let decoderResults = try  jsonDecoder.decode(Articles.self, from: data)
+                let decoderResults = try  jsonDecoder.decode([Article].self, from: data)
                 self.articles = decoderResults
                 self.delegate?.didDataFetchProcessFinished(true)
             }catch {

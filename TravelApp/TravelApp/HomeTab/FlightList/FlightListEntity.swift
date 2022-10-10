@@ -10,8 +10,10 @@
 
 struct FlightCellViewModel {
 
-    var departure: String?
-    var arrival: String?
+    var flightNumber: String?
+    var callSign: String?
+    var arrivalAirport: String?
+    var departureAirpot: String?
 
 }
 
