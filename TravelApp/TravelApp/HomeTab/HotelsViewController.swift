@@ -9,6 +9,8 @@ import UIKit
 
 class HotelsViewController: UIViewController {
 
+    @IBOutlet weak var hotelsTableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -17,7 +19,6 @@ class HotelsViewController: UIViewController {
         
 }
 
-    
     @objc func backToHomeVc() {
         
         navigationController?.popToRootViewController(animated: true)
