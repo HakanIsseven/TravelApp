@@ -9,6 +9,10 @@ import UIKit
 
 class SearchViewController: UIViewController {
 
+    
+    
+    @IBOutlet weak var hotelSearchButton: UIButton!
+    @IBOutlet weak var flightSearchButton: UIButton!
     @IBOutlet weak var searchTextField: UITextField!
     override func viewDidLoad() {
         
@@ -16,17 +20,29 @@ class SearchViewController: UIViewController {
 
         setupSearchTextField()
         
-        
-        
-        
     }
     
     
-
+    @IBAction func hotelSearchButtonTapped(_ sender: Any) {
+        
+        hotelSearchButton.setImage(UIImage(named: "Hotel selected"), for: .normal)
+        flightSearchButton.setImage(UIImage(named: "Flights Not Selected"), for: .normal)
+        
+    }
+    
+        
+    @IBAction func flightSearchButtonTapped(_ sender: Any) {
+        flightSearchButton.setImage(UIImage(named: "Flight Selected"), for: .normal)
+        hotelSearchButton.setImage(UIImage(named: "Hotel not selected"), for: .normal)
+    }
+    
+    
+        
+    }
+    
+ 
 
     
-
-}
 
 
 private extension SearchViewController {

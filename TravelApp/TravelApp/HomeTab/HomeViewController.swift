@@ -6,16 +6,21 @@
 //
 
 import UIKit
+import Kingfisher
 
 class HomeViewController: UIViewController {
 
     @IBOutlet weak var topPickArticlesCollectionView: UICollectionView!
+    private let viewModel = HomeViewModel()
+    private var articles: [HomeCellViewModel] = []
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         setupUI()
+        viewModel.viewDelegate = self
+        viewModel.didViewLoad()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -70,13 +75,19 @@ private extension HomeViewController {
 extension HomeViewController: UICollectionViewDataSource  {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
+        return articles.count  }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TopArticlesCollectionViewCell", for: indexPath) as! TopArticlesCollectionViewCell
         
+        cell.collectionViewCellHeaderLabel.text =  articles[indexPath.row].articleName
+        cell.collectionViewCellTagLabel.text = articles[indexPath.row].tag
+        let url = URL.init(string: articles[indexPath.row].photoUrl!)
+        cell.collectionViewCellImage.kf.setImage(with: url)
+    
+
         cell.layer.cornerRadius = 6
+        cell.clipsToBounds = true
         
         
         return cell
@@ -103,6 +114,28 @@ extension HomeViewController: UICollectionViewDelegateFlowLayout  {
     }
     
     
+    
+}
+
+
+extension HomeViewController: HomeViewModelViewProtocol {
+ 
+    
+    
+    func didCellItemFetch(_ articles: [HomeCellViewModel]) {
+        self.articles = articles
+        DispatchQueue.main.async {
+            self.topPickArticlesCollectionView.reloadData()
+        }
+    }
+    
+    func showEmptyView() {
+        
+    }
+    
+    func hideEmptyView() {
+        
+    }
     
 }
 

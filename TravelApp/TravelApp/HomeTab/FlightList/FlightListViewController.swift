@@ -9,7 +9,6 @@ import UIKit
 
 class FlightListViewController: UIViewController {
 
-    
     @IBOutlet weak var flightTableView2: UITableView!
     
     private let viewModel = FlightListViewModel()

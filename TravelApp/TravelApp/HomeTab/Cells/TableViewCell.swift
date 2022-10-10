@@ -26,4 +26,10 @@ class TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func layoutSubviews() {
+         super.layoutSubviews()
+         let bottomSpace: CGFloat = 14.0 
+         self.contentView.frame = self.contentView.frame.inset(by: UIEdgeInsets(top: 0, left: 0, bottom: bottomSpace, right: 0))
+    }
+    
 }

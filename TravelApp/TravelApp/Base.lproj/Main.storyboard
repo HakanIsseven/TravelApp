@@ -124,12 +124,12 @@
         <!--Flight List View Controller-->
         <scene sceneID="ZAa-PH-Ohs">
             <objects>
-                <viewController storyboardIdentifier="FlightListViewController" id="d8u-Pc-mYf" customClass="FlightListViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightListViewController" modalPresentationStyle="fullScreen" id="d8u-Pc-mYf" customClass="FlightListViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0v-xn-0Yb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-q2-iOx">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-q2-iOx">
                                 <rect key="frame" x="16" y="60" width="382" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -169,7 +169,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="khT-dr-YbX">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="khT-dr-YbX">
                                 <rect key="frame" x="16" y="60" width="382" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
@@ -194,7 +194,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="hotelsTableView" destination="khT-dr-YbX" id="AWF-QS-mP5"/>
+                        <outlet property="hotelTableView" destination="khT-dr-YbX" id="iig-uQ-n2E"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy3-Ly-yCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -206,7 +206,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GSH-GB-htc" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="booking button selected" shadowImage="booking button selected" itemPositioning="centered" itemSpacing="85" id="pRd-bE-Bpq">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" itemPositioning="centered" itemSpacing="85" id="pRd-bE-Bpq">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,11 +242,17 @@
                                         <rect key="frame" x="0.0" y="0.0" width="120" height="54"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Hotel selected"/>
+                                        <connections>
+                                            <action selector="hotelSearchButtonTapped:" destination="mcP-Cu-m2V" eventType="touchUpInside" id="B2Q-VU-TrN"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="top" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zxM-Ec-voR">
                                         <rect key="frame" x="121" y="0.0" width="133" height="54"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" image="Flights Not Selected"/>
+                                        <connections>
+                                            <action selector="flightSearchButtonTapped:" destination="mcP-Cu-m2V" eventType="touchUpInside" id="VKW-Rh-cdx"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -279,6 +285,8 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="search button not selected" selectedImage="search button selected" id="Hoo-bu-TIf"/>
                     <connections>
+                        <outlet property="flightSearchButton" destination="zxM-Ec-voR" id="WOj-4p-vF6"/>
+                        <outlet property="hotelSearchButton" destination="h5P-ut-FL5" id="PMA-1b-ysV"/>
                         <outlet property="searchTextField" destination="gJK-6L-Max" id="u33-Q5-afS"/>
                     </connections>
                 </viewController>
