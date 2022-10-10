@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HotelsViewController: UIViewController {
+class HotelsListViewController: UIViewController {
 
     @IBOutlet weak var hotelsTableView: UITableView!
     
@@ -32,7 +32,7 @@ class HotelsViewController: UIViewController {
 
 
 
-private extension HotelsViewController {
+private extension HotelsListViewController {
     
     func prepareView() {
         

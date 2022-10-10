@@ -39,7 +39,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
                                 </state>
                                 <connections>
-                                    <segue destination="d8u-Pc-mYf" kind="show" id="Jbz-gy-NcH"/>
+                                    <action selector="flightsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SFf-y0-CZ9"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Where’s your                                        Next Destination?" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jru-hF-FK9">
@@ -85,7 +85,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TW5-cs-lDj" kind="show" id="X10-gc-Nok"/>
+                                    <action selector="hotelsButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1qV-gv-z2C"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -124,13 +124,13 @@
         <!--Flight List View Controller-->
         <scene sceneID="ZAa-PH-Ohs">
             <objects>
-                <viewController id="d8u-Pc-mYf" customClass="FlightListViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FlightListViewController" id="d8u-Pc-mYf" customClass="FlightListViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0v-xn-0Yb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="oIQ-q2-iOx">
-                                <rect key="frame" x="16" y="104" width="382" height="693"/>
+                                <rect key="frame" x="16" y="60" width="382" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>
@@ -161,16 +161,16 @@
             </objects>
             <point key="canvasLocation" x="2337.68115942029" y="-559.15178571428567"/>
         </scene>
-        <!--Hotels View Controller-->
+        <!--Hotels List View Controller-->
         <scene sceneID="CLc-g8-ddZ">
             <objects>
-                <viewController id="TW5-cs-lDj" customClass="HotelsViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HotelsListViewController" id="TW5-cs-lDj" customClass="HotelsListViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Tn3-pk-5ad">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="khT-dr-YbX">
-                                <rect key="frame" x="16" y="104" width="382" height="693"/>
+                                <rect key="frame" x="16" y="60" width="382" height="786"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </tableView>
                         </subviews>

@@ -1,9 +1,3 @@
-//
-//  FlightViewModel.swift
-//  TravelApp
-//
-//  Created by Hakan İşseven on 10.10.2022.
-//
 
 import Foundation
 
@@ -29,9 +23,6 @@ class FlightListViewModel {
     func didViewLoad() {
         model.fetchData()
     }
-    
-
-    
 }
 
 
@@ -40,7 +31,7 @@ private extension FlightListViewModel  {
     @discardableResult
     func makeViewBasedModel(_ flights: [Flight])-> [FlightCellViewModel] {
        
-        return flights.map { .init(departure: $0.title, arrival: $0.body)
+        return flights.map { .init(departure: $0.flight.number, arrival: $0.airline.callsign.rawValue)
         }
     }
 }
@@ -56,12 +47,8 @@ extension FlightListViewModel: FlightListModelProtocol {
             viewDelegate?.didCellItemFetch(cellModels)
             viewDelegate?.hideEmptyView()
         } else {
-            
             viewDelegate?.showEmptyView()
-            
         }
-
-        
     }
     
 }
