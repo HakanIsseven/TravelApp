@@ -18,11 +18,11 @@ class FlightListModel {
 
     weak var delegate: FlightListModelProtocol?
     
-    var flights: [Flight] = []
+    var flights: Flights = []
     
     func fetchData() {
        
-        guard let url = URL.init(string: "http://api.travelpayouts.com/v1/prices/monthly?currency=USD&origin=LHR&destination=&token=5c64da459a7cdb2befaa288e6a88cbff") else {
+        guard let url = URL.init(string: "https://app.goflightlabs.com/routes?access_key=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMzgxYzZjNTI0NTU4Zjg1MzE4MDY3Zjc4N2JkNTQ5NWY0N2EyMzJhMzhjY2I2NjczOWQ5NDI1YzhmYzQ2MmMyY2FkZTY0YjQ1OTM4NmUxOTMiLCJpYXQiOjE2NjUzOTMxMDQsIm5iZiI6MTY2NTM5MzEwNCwiZXhwIjoxNjk2OTI5MTA0LCJzdWIiOiIxNDc1NCIsInNjb3BlcyI6W119.QE6V3Uc1M0XliuYU0uiM7BbqiQQnxof2nHWT9DpEtNLJ_wOwLM6qD9yDsIybTTheUQD5RawzKm4djPgQUJq1sA&dep_iata=SAW&arr_iata=ADB") else {
             delegate?.didDataFetchProcessFinished(false)
             return
         }
@@ -48,7 +48,7 @@ class FlightListModel {
             
             do {
                 let jsonDecoder = JSONDecoder()
-                self.flights = try  jsonDecoder.decode([Flight].self, from: data)
+                self.flights = try  jsonDecoder.decode(Flights.self, from: data)
                 self.delegate?.didDataFetchProcessFinished(true)
             }catch {
                 print("JSON serialization Error")
