@@ -38,19 +38,6 @@ private extension HomeViewController {
         topPickArticlesCollectionView.delegate = self
         topPickArticlesCollectionView.dataSource = self
         
-        self.navigationController?.navigationBar.titleTextAttributes = [NSAttributedString.Key.font: UIFont(name: "SourceSansPro-Bold", size: 20)]
-        self.navigationController?.navigationBar.topItem?.title = "Flights"
-    
-        let a = UINavigationBarAppearance()
-        a.titlePositionAdjustment = .init(
-           horizontal: 10,
-           vertical: 10
-        )
-        navigationItem.scrollEdgeAppearance = a
-        navigationItem.compactAppearance = a
-        navigationItem.standardAppearance = a
-        
-        
         
         registerCell()
     }

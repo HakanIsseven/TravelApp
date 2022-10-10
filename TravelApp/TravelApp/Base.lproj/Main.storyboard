@@ -85,7 +85,7 @@
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration"/>
                                 </state>
                                 <connections>
-                                    <segue destination="TW5-cs-lDj" kind="show" id="cNe-ua-tTj"/>
+                                    <segue destination="TW5-cs-lDj" kind="show" id="X10-gc-Nok"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -121,10 +121,10 @@
             </objects>
             <point key="canvasLocation" x="1681.1594202898552" y="-559.15178571428567"/>
         </scene>
-        <!--Flight View Controller-->
+        <!--Flight List View Controller-->
         <scene sceneID="ZAa-PH-Ohs">
             <objects>
-                <viewController id="d8u-Pc-mYf" customClass="FlightViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="d8u-Pc-mYf" customClass="FlightListViewController" customModule="TravelApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="q0v-xn-0Yb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -153,6 +153,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="flightTableView2" destination="oIQ-q2-iOx" id="cNA-QL-QHH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kDE-yM-e5Y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,6 +193,9 @@
                             </button>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="hotelsTableView" destination="khT-dr-YbX" id="AWF-QS-mP5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vy3-Ly-yCl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
