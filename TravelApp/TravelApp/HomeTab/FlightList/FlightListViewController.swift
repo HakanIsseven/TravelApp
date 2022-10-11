@@ -14,12 +14,9 @@ class FlightListViewController: UIViewController {
     private let viewModel = FlightListViewModel()
     private var flights: [FlightCellViewModel] = []
     
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
             
-    prepareView()
         setupUI()
         viewModel.viewDelegate = self
         viewModel.didViewLoad()
@@ -31,19 +28,9 @@ class FlightListViewController: UIViewController {
     }
         }
 
-        
-        
-
-
-
-
-
 private extension FlightListViewController {
 
     func prepareView() {
-
-
-
         let back = UIImage(named: "back arrow")
         let backView = UIImageView(image: back)
         backView.isUserInteractionEnabled = true
@@ -61,10 +48,7 @@ private extension FlightListViewController {
         navigationItem.scrollEdgeAppearance = a
         navigationItem.compactAppearance = a
         navigationItem.standardAppearance = a
-
-
-
-
+        //Making Bar button and bar tittle for navigation bar.
     }
 }
 
@@ -75,6 +59,7 @@ private extension FlightListViewController {
         flightTableView2.dataSource = self
         
         registerCell()
+        prepareView()
     }
     func registerCell() {
         flightTableView2.register(.init(nibName: "TableViewCell", bundle: nil), forCellReuseIdentifier: "TableViewCell")
@@ -91,7 +76,7 @@ extension FlightListViewController: UITableViewDelegate {
         detailsVc.flightData = self.flights[indexPath.row]
         detailsVc.modalPresentationStyle = .fullScreen
         self.present(detailsVc, animated: true)
-        
+        // Create a new FlightCellViewModel object to the new ViewController and open that vc
     }
 
 }
@@ -106,31 +91,19 @@ extension FlightListViewController: UITableViewDataSource {
         cell.tableViewSecondLabel.text = flights[indexPath.row].flightNumber
         cell.layer.cornerRadius = 8
         cell.clipsToBounds = true
-
-
         return cell
     }
-    
 }
-
-
 extension FlightListViewController: FlightListViewModelViewProtocol {
- 
-    
-    
+
     func didCellItemFetch(_ flights: [FlightCellViewModel]) {
         self.flights = flights
         DispatchQueue.main.async {
             self.flightTableView2.reloadData()
         }
     }
-    
     func showEmptyView() {
-        
     }
-    
     func hideEmptyView() {
-        
     }
-    
 }

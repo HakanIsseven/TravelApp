@@ -22,7 +22,7 @@ class FlightListModel {
     
     func fetchData() {
        
-        guard let url = URL.init(string: "https://app.goflightlabs.com/routes?access_key=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiMzgxYzZjNTI0NTU4Zjg1MzE4MDY3Zjc4N2JkNTQ5NWY0N2EyMzJhMzhjY2I2NjczOWQ5NDI1YzhmYzQ2MmMyY2FkZTY0YjQ1OTM4NmUxOTMiLCJpYXQiOjE2NjUzOTMxMDQsIm5iZiI6MTY2NTM5MzEwNCwiZXhwIjoxNjk2OTI5MTA0LCJzdWIiOiIxNDc1NCIsInNjb3BlcyI6W119.QE6V3Uc1M0XliuYU0uiM7BbqiQQnxof2nHWT9DpEtNLJ_wOwLM6qD9yDsIybTTheUQD5RawzKm4djPgQUJq1sA&dep_iata=SAW&arr_iata=ADB") else {
+        guard let url = URL.init(string: "https://app.goflightlabs.com/routes?access_key=eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYzNjNzNiYmViNmMzMDkxOWMyMWUwOThkZjU5NjgzODM0MDM0ODJiNTI2MDU4NzhiN2NmMzExNWE5YmYxY2JjNWFhOGEyNTk2YzVhYmMxMzAiLCJpYXQiOjE2NjU0NDgzNTUsIm5iZiI6MTY2NTQ0ODM1NSwiZXhwIjoxNjk2OTg0MzU1LCJzdWIiOiIxNDgwNCIsInNjb3BlcyI6W119.jXDtY_szZNCv8L4R4icqUc-gr3F_CIk6LpI-hQcJNgG1O5ORggbteQtjbLnOoxNLBWR0rYsXI30A-ddDQbRrWQ&dep_iata=SAW&arr_iata=ADB") else {
             delegate?.didDataFetchProcessFinished(false)
             return
         }

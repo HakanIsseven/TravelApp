@@ -32,6 +32,7 @@ private extension FlightListViewModel  {
     func makeViewBasedModel(_ flights: [Flight])-> [FlightCellViewModel] {
        
         return flights.map { .init(flightNumber: $0.flight.number, callSign: $0.airline.callsign.rawValue, arrivalAirport: $0.arrival.airport.rawValue, departureAirpot: $0.departure.airport.rawValue)
+            //Uygulamada kullanmamızı sağlayacak formata dönüştürüyoruz.
         }
     }
 }
